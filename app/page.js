@@ -10,6 +10,7 @@ export default function Home() {
       { /* this calls the other page to print on this page*/ }
 
       <p> <Link href= "/week2"> Week 2 </Link> </p>
+      <p> <Link href= "/week3"> Week 3 </Link> </p>
        
     </main>
   )
