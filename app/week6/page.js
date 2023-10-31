@@ -8,15 +8,10 @@ export default function page(){
    
    
     const [items, setItems] = useState(ItemsData); //Add the "useState" hook to the component.
+    
     const handleAddItem = (newItem) => {
         setItems([...items, newItem]);
-    }
-    
-    // const handleAddItem = (newItem) => { //Add the handleAddItem function.
-    //     const updatedItem = { //Create a new item object.
-    //         ...newItem,
-    //         id: items.length + 1,
-    //     };
+    } 
 
     return(
         <main className="p-2">
