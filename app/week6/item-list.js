@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Item from './item';
 
-function ItemList({ items, onItemSelect }) {
+function ItemList({ items }) {
   const [sortBy, setSortBy] = useState('name'); // Initialize sortBy state variable with 'name'.
 
   const sortItems = (itemsToSort, sortingProperty) => {
@@ -52,14 +52,12 @@ function ItemList({ items, onItemSelect }) {
       </div>
 
       {sortedItems.map((item, index) => (
-        <div key={index} onClick={() => handleItemClick(item)}>
-          {/* Make each Item component clickable */}
-          <Item
-            name={item.name}
-            quantity={item.quantity}
-            category={item.category}
-          />
-        </div>
+        <Item
+          key={index}
+          name={item.name}
+          quantity={item.quantity}
+          category={item.category}
+        />
       ))}
     </div>
   );

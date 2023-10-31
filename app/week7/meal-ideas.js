@@ -18,27 +18,27 @@ function MealIdeas({ ingredient }) {
     }
   };
 
-useEffect(() => {
+  useEffect(() => {
     fetchMealIdeas();
-}, [ingredient]);
+  }, [ingredient]);
 
-return (
+  return (
     <div>
-        <h2 className="text-4xl font-bold mb-4">Meal Ideas for :  {ingredient}</h2>
-        {meals ? ( // Check if meals is not null
-            <ul>
-                {meals.map((meal) => (
-                    <li key={meal.idMeal}>
-                        {meal.strMeal}
-                        <img src={meal.strMealThumb} alt={meal.strMeal} />
-                    </li>
-                ))}
-            </ul>
-        ) : (
-            <p>No meal ideas found for {ingredient}</p>
-        )}
+      <h2 className="text-4xl font-bold mb-4">Meal Ideas for: {ingredient}</h2>
+      {meals ? ( // Check if meals is not null
+        <ul>
+          {meals.map((meal) => (
+            <li key={meal.idMeal}>
+              {meal.strMeal}
+              <img src={meal.strMealThumb} alt={meal.strMeal} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No meal ideas found for {ingredient}</p>
+      )}
     </div>
-);
+  );
 }
 
 export default MealIdeas;

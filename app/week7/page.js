@@ -14,12 +14,12 @@ export default function Page() {
         setItems([...items, newItem]);
     };
 
-    const handleItemSelect = (clickedItem) => {
-        // Extract and clean up the item name
-        const itemName = clickedItem.name.replace
-        (/([\u2700-\u27BF]|[\uE000-\uF8FF]|\ud83c[\udc00-\udfff]|\ud83d[\udc00-\udfff]|\ud83e[\udc00-\udfff]|\u2011-\u26FF|\ud83c[\udd00-\udfff])/g, '').trim();
-        setSelectedItemName(itemName);
-    };
+    const handleItemSelect = (selectedItem) => {
+        let itemName = selectedItem.name.split(',')[0];
+        itemName = itemName.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/, ''); // Removes emojis
+        const cleanedItemName = itemName.trim();
+        setSelectedItemName(cleanedItemName);
+      };
     
     return (
         <div style={{ display: "flex" }}>
