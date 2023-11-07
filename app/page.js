@@ -33,6 +33,9 @@ export default function Home() {
       <p> <Link href= "/week7"> Week 7 </Link> </p>
       </div>
     
+      <div style={{ backgroundColor: 'orange', marginRight: '1355px', marginBottom: '20px', marginTop: '20px', padding: '20px 35px', borderRadius: '20px' }}>
+      <p> <Link href= "/week8"> Week 8 </Link> </p>
+      </div>
     </main>
   );
 }
