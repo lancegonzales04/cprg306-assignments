@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import StudentInfo from './StudentInfo'
+import React from 'react';
 
 export default function Home() {
   return (
@@ -35,6 +36,10 @@ export default function Home() {
     
       <div style={{ backgroundColor: 'orange', marginRight: '1355px', marginBottom: '20px', marginTop: '20px', padding: '20px 35px', borderRadius: '20px' }}>
       <p> <Link href= "/week8"> Week 8 </Link> </p>
+      </div>
+
+      <div style={{ backgroundColor: 'orange', marginRight: '1355px', marginBottom: '20px', marginTop: '20px', padding: '20px 35px', borderRadius: '20px' }}>
+      <p> <Link href= "/week10"> Week 10 </Link> </p>
       </div>
     </main>
   );
